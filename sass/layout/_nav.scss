@@ -56,3 +56,11 @@
 .nav-items-animation {
   animation: navItemsAnimation 1s both;
 }
+
+@media (min-width: 992px) {
+  .nav {
+    &__item {
+      font-size: 4.8rem;
+    }
+  }
+}

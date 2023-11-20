@@ -1,0 +1,79 @@
+.dreams {
+  &__box {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0;
+  }
+
+  &__img {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  &__title {
+    margin-bottom: 0.5em;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .dreams {
+    &__box {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__box-text {
+      width: 55%;
+      &--right {
+        text-align: right;
+      }
+    }
+
+    &__box-img {
+      width: 40%;
+      &--right {
+        order: 1;
+      }
+    }
+
+    &__img {
+      margin-bottom: 0;
+      max-height: 300px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .dreams {
+    &__text {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .dreams {
+    &__box {
+      margin: 5em 0;
+    }
+
+    &__box-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-bottom: 2.5em;
+    }
+
+    &__title {
+      font-size: 3.6rem;
+    }
+
+    &__text {
+      font-size: 2.2rem;
+    }
+  }
+}
