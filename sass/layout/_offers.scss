@@ -1,0 +1,101 @@
+.offers {
+  position: relative;
+  @include heroImages("../../assets/maldivesMobile.jpg");
+  overflow: hidden;
+
+  .section-heading {
+    color: $pure-white;
+  }
+
+  &__option {
+    margin: 1em 0;
+    box-shadow: 5px 5px 10px #2e2e2e2e;
+    background-color: $pure-white;
+    overflow: hidden;
+  }
+
+  &__option-img {
+    width: 100%;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__option-info {
+    padding: 2em;
+    background-color: $pure-white;
+    z-index: 10;
+  }
+
+  &__option-heading {
+    margin-bottom: 0.5em;
+    font-size: 2.4rem;
+    font-weight: 300;
+  }
+
+  &__option-text {
+    margin-bottom: 0.5em;
+    font-size: 1.3rem;
+    color: $dark;
+  }
+
+  &__option-btn {
+    margin-top: 1em;
+    padding: 0.8em;
+    width: 100%;
+    color: $pure-white;
+    background-color: $main-color;
+    border: none;
+    border-radius: 8px;
+
+    &::before {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .offers {
+    &__option {
+      display: flex;
+      margin: 2em 0;
+    }
+
+    &__option-img {
+      width: 50%;
+      height: auto;
+
+      &--right {
+        order: 1;
+      }
+    }
+
+    &__option-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__option-heading {
+      margin-bottom: 0.5em;
+      font-size: 3.6rem;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .offers {
+    background-image: $blue-gradient, url("../../assets/maldives.jpg");
+
+    &__option-img {
+      object-fit: cover;
+      height: 300px;
+    }
+
+    &__option-text {
+      font-size: 1.5rem;
+    }
+  }
+}
